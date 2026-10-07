@@ -18,9 +18,10 @@ cask "voynix" do
   app "Voynix.app"
 
   # The app is not notarized by Apple, so drop the quarantine flag to avoid the Gatekeeper block.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Voynix.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Voynix.app"],
+        writable_paths: ["{{appdir}}/Voynix.app"]
   end
 
   zap trash: [
