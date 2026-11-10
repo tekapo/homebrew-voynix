@@ -1,6 +1,6 @@
 cask "voynix" do
-  version "0.39.7"
-  sha256 "6362850d29c1983fd092003b6261ea9bcd64d73ed06a3cb89dce503600411879"
+  version "0.40.0"
+  sha256 "470c0d8d3ceadece6584c28ac1b0924b3506d4fab987fd4818f96ace5c00fd5c"
 
   url "https://github.com/tekapo/voynix/releases/download/v#{version}/Voynix_#{version}_aarch64.dmg"
   name "Voynix"
